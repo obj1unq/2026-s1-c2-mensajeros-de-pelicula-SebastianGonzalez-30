@@ -57,19 +57,19 @@ object neo {
 
 object saraConnor {
   
-    var peso = 70
+    var pesoPropio = 70
     var vehiculoEnUso = null
 
 
-    method setPeso(unPeso) {
+    method pesoPropio(_peso) {
       
-        peso = unPeso
+        pesoPropio = _peso
 
     }
 
     method peso() {
       
-      return peso + vehiculoEnUso.peso()
+      return pesoPropio + vehiculoEnUso.peso()
     }
 
     method puedeComunicarse() {
