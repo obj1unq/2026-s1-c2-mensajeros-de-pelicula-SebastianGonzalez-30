@@ -15,7 +15,7 @@ object camion {
 
     method peso() {
       
-       return pesoDelCamion + (500 * cantidadDeAcoplados) 
+       return pesoDelCamion + (250 * cantidadDeAcoplados) 
     }
 
     method cantidadDeAcoplados() {
