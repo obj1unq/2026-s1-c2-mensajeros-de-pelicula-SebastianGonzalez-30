@@ -1,32 +1,37 @@
 import vehiculos.*
-
+import destinos.*
 
 object jeanGrey {
   
-    const pesoCorporal = 65
-    const puedeComunicarse = true
+    const peso = 65
+    
 
-    method pesoCorporal() {
+    method peso() {
       
-        return pesoCorporal
+        return peso
 
     }
 
     method puedeComunicarse() {
 
-        return puedeComunicarse
+        return true
+    }
+
+    method puedeIrA(unDestino) {
+      
+        return unDestino.cumplePermisosDeEntrada(self)
+
     }
 }
 
 
 object neo {
   
-    const pesoCorporal = 0
     var puedeComunicarse = null
 
-    method pesoCorporal() {
+    method peso() {
       
-        return pesoCorporal
+        return 0
 
     }
 
@@ -36,34 +41,40 @@ object neo {
 
     }
 
+    method setpuedeComunicarse(boolean) {
+      
+        puedeComunicarse = boolean
+
+    }
+
+    method puedeIrA(unDestino) {
+      
+        return unDestino.cumplePermisosDeEntrada(self)
+
+    }
+
 }
 
 object saraConnor {
   
-    var pesoCorporal = 70
-    const puedeComunicarse = false
+    var peso = 70
     var vehiculoEnUso = null
 
-    method asignarVehiculo(unVehiculo) {
+
+    method setPeso(unPeso) {
       
-        vehiculoEnUso = unVehiculo
+        peso = unPeso
 
     }
 
-    method setPesoCorporal(unPeso) {
+    method peso() {
       
-        pesoCorporal = unPeso
-
-    }
-
-    method pesoCorporal() {
-      
-      return pesoCorporal
+      return peso
     }
 
     method puedeComunicarse() {
       
-      return puedeComunicarse
+      return false
     }
 
     method vehiculoEnUso() {
@@ -74,6 +85,11 @@ object saraConnor {
     method setVehiculoEnUso(unVehiculo) {
       
         vehiculoEnUso = unVehiculo
+
+    }
+    method puedeIrA(unDestino) {
+      
+        return unDestino.cumplePermisosDeEntrada(self)
 
     }
 }

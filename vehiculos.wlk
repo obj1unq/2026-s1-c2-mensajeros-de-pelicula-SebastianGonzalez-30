@@ -10,12 +10,12 @@ object moto {
 
 object camion {
   
-    var peso = 500
+    const pesoDelCamion = 500
     var cantidadDeAcoplados = 0
 
     method peso() {
       
-       return peso 
+       return pesoDelCamion + (500 * cantidadDeAcoplados) 
     }
 
     method cantidadDeAcoplados() {
@@ -29,9 +29,4 @@ object camion {
 
     }
 
-    method pesoTotal() {
-      
-        peso = peso + (cantidadDeAcoplados * 250)
-
-    }
 }

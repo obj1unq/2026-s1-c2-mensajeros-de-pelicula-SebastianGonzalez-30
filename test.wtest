@@ -1,0 +1,33 @@
+import destinos.*
+import mensajeros.*
+import paquete.*
+import vehiculos.*
+
+describe "Los mensajeros pueden ir a los destinos" {
+  test "Indica si Neo NO puede hacer el viaje" {
+    
+    paquete.setPago(false)
+    assert.notThat((paquete.puedeHacerElViajeA(neo, laMatrix))) 
+
+  }
+
+ test "Indica si Jean puede llevar el paquete a la Matrix" {
+     
+    paquete.setPago(true)
+    assert.equals(true, paquete.puedeHacerElViajeA(jeanGrey, laMatrix))
+   }
+
+ test "indica si Sara NO puede llevar el paquete con un acoplado al puente de Brooklyn" {
+   
+    saraConnor.setVehiculoEnUso(camion)
+    camion.setCantidadDeAcoplados(1)
+    assert.notThat((paquete.puedeHacerElViajeA(saraConnor, puenteDeBrooklyn)))
+
+ }
+ test "indica si Sara puede hacer el viaje anterior usando la moto" {
+   
+   saraConnor.setVehiculoEnUso(moto)
+   assert.equals(true, paquete.puedeHacerElViajeA(saraConnor, puenteDeBrooklyn))
+ }
+
+}
