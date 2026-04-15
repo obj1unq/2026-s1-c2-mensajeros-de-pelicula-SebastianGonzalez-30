@@ -14,7 +14,7 @@ describe "Los mensajeros pueden ir a los destinos" {
  test "Indica si Jean puede llevar el paquete a la Matrix" {
      
     paquete.setPago(true)
-    assert.equals(true, paquete.puedeHacerElViajeA(jeanGrey, laMatrix))
+    assert.that(paquete.puedeHacerElViajeA(jeanGrey, laMatrix))
    }
 
  test "indica si Sara NO puede llevar el paquete con un acoplado al puente de Brooklyn" {
@@ -29,7 +29,7 @@ describe "Los mensajeros pueden ir a los destinos" {
    
    paquete.setPago(true)
    saraConnor.setVehiculoEnUso(moto)
-   assert.equals(true, paquete.puedeHacerElViajeA(saraConnor, puenteDeBrooklyn))
+   assert.that(paquete.puedeHacerElViajeA(saraConnor, puenteDeBrooklyn))
  }
 
 }
