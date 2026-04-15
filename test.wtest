@@ -19,6 +19,7 @@ describe "Los mensajeros pueden ir a los destinos" {
 
  test "indica si Sara NO puede llevar el paquete con un acoplado al puente de Brooklyn" {
    
+    paquete.setPago(true)
     saraConnor.setVehiculoEnUso(camion)
     camion.setCantidadDeAcoplados(1)
     assert.notThat((paquete.puedeHacerElViajeA(saraConnor, puenteDeBrooklyn)))
@@ -26,6 +27,7 @@ describe "Los mensajeros pueden ir a los destinos" {
  }
  test "indica si Sara puede hacer el viaje anterior usando la moto" {
    
+   paquete.setPago(true)
    saraConnor.setVehiculoEnUso(moto)
    assert.equals(true, paquete.puedeHacerElViajeA(saraConnor, puenteDeBrooklyn))
  }
