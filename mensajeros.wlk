@@ -1,4 +1,4 @@
-import vehiculos
+import vehiculos.*
 
 
 object jeanGrey {
@@ -42,7 +42,7 @@ object saraConnor {
   
     var pesoCorporal = 70
     const puedeComunicarse = false
-    var vehiculoEnUso = vehiculo
+    var vehiculoEnUso = null
 
     method asignarVehiculo(unVehiculo) {
       
@@ -70,5 +70,10 @@ object saraConnor {
       
       return vehiculoEnUso
     }
+    
+    method setVehiculoEnUso(unVehiculo) {
+      
+        vehiculoEnUso = unVehiculo
 
+    }
 }
