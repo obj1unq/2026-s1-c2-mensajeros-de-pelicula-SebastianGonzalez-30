@@ -69,7 +69,7 @@ object saraConnor {
 
     method peso() {
       
-      return peso
+      return peso + vehiculoEnUso.peso()
     }
 
     method puedeComunicarse() {
